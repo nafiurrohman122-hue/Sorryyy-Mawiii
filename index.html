@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mawiiii ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffd6e7,#ffeef5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    max-width:600px;
+    width:100%;
+}
+
+h1{
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+p{
+    color:#444;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    border:none;
+    padding:14px 24px;
+    margin:10px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#yesBtn{
+    background:#ff4d88;
+    color:white;
+}
+
+#noBtn{
+    background:#eee;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#finalMessage{
+    display:none;
+}
+
+img{
+    width:120px;
+    margin-bottom:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div id="mainContent">
+
+<h1>🌷 Hey Mawiiii 🌷</h1>
+
+<p>
+I know we talked today,
+but maybe I couldn't give you the warmth, care, and attention that you deserved.
+</p>
+
+<p>
+If my words felt a little distant, I'm truly sorry.
+It was never because I don't care.
+</p>
+
+<p>
+Sometimes I fail to express my feelings the way I want to,
+but please don't mistake that for a lack of love.
+</p>
+
+<p>
+Because no matter how busy my day gets,
+you are still the person I think about,
+the person I care for,
+and the person I love the most. ❤️
+</p>
+
+<p>
+You mean more to me than I can put into words.
+</p>
+
+<h3>Will you forgive me, Mawiiii? 🥺</h3>
+
+<div class="buttons">
+<button id="yesBtn">❤️ Yes, I forgive you</button>
+<button id="noBtn">🙈 Still a little angry</button>
+</div>
+
+</div>
+
+<div id="finalMessage">
+<h1>✨ Thank You, Mawiiii ✨</h1>
+
+<p>
+Thank you for forgiving me. ❤️
+</p>
+
+<p>
+No matter what happens,
+you'll always be someone very special to me.
+</p>
+
+<h2>❤️ I Love You. Always. ❤️</h2>
+</div>
+
+</div>
+
+<script>
+
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+
+const messages = [
+"🥺 Please, Mawiiii?",
+"🌷 Just one more chance?",
+"❤️ You mean so much to me.",
+"😭 I love you more than my silly mistakes.",
+"🥹 Please don't stay mad..."
+];
+
+let count = 0;
+
+noBtn.addEventListener("click", () => {
+
+    noBtn.innerText = messages[count % messages.length];
+
+    let currentSize =
+    parseFloat(window.getComputedStyle(yesBtn).fontSize);
+
+    yesBtn.style.fontSize = (currentSize + 4) + "px";
+
+    count++;
+});
+
+yesBtn.addEventListener("click", () => {
+    document.getElementById("mainContent").style.display = "none";
+    document.getElementById("finalMessage").style.display = "block";
+});
+
+</script>
+
+</body>
+</html>
